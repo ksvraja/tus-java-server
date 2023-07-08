@@ -4,12 +4,13 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.fail;
 
-import me.desair.tus.server.HttpHeader;
-import me.desair.tus.server.HttpMethod;
-import me.desair.tus.server.exception.InvalidUploadLengthException;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
+
+import me.desair.tus.server.HttpHeader;
+import me.desair.tus.server.HttpMethod;
+import me.desair.tus.server.exception.InvalidUploadLengthException;
 
 /**
  * The request MUST include one of the following headers:

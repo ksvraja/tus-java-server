@@ -5,11 +5,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import me.desair.tus.server.TusFileUploadService;
-import me.desair.tus.server.upload.UploadId;
 import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import me.desair.tus.server.TusFileUploadService;
+import me.desair.tus.server.upload.UploadId;
 
 /**
  * Common abstract super class to implement service that use the disk file system

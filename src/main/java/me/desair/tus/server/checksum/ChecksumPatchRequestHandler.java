@@ -4,6 +4,8 @@ import static me.desair.tus.server.checksum.ChecksumAlgorithm.CHECKSUM_VALUE_SEP
 
 import java.io.IOException;
 
+import org.apache.commons.lang3.StringUtils;
+
 import me.desair.tus.server.HttpHeader;
 import me.desair.tus.server.HttpMethod;
 import me.desair.tus.server.checksum.validation.ChecksumAlgorithmValidator;
@@ -13,7 +15,6 @@ import me.desair.tus.server.upload.UploadStorageService;
 import me.desair.tus.server.util.AbstractRequestHandler;
 import me.desair.tus.server.util.TusServletRequest;
 import me.desair.tus.server.util.TusServletResponse;
-import org.apache.commons.lang3.StringUtils;
 
 public class ChecksumPatchRequestHandler extends AbstractRequestHandler {
 

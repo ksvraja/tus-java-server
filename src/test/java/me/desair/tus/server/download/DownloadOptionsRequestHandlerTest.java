@@ -6,14 +6,15 @@ import static org.hamcrest.Matchers.containsInAnyOrder;
 
 import java.util.Arrays;
 
-import me.desair.tus.server.HttpHeader;
-import me.desair.tus.server.HttpMethod;
-import me.desair.tus.server.util.TusServletRequest;
-import me.desair.tus.server.util.TusServletResponse;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+
+import me.desair.tus.server.HttpHeader;
+import me.desair.tus.server.HttpMethod;
+import me.desair.tus.server.util.TusServletRequest;
+import me.desair.tus.server.util.TusServletResponse;
 
 public class DownloadOptionsRequestHandlerTest {
 

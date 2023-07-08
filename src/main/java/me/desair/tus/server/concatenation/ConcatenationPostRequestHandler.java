@@ -2,6 +2,8 @@ package me.desair.tus.server.concatenation;
 
 import java.io.IOException;
 
+import org.apache.commons.lang3.StringUtils;
+
 import me.desair.tus.server.HttpHeader;
 import me.desair.tus.server.HttpMethod;
 import me.desair.tus.server.exception.TusException;
@@ -12,7 +14,6 @@ import me.desair.tus.server.util.AbstractRequestHandler;
 import me.desair.tus.server.util.TusServletRequest;
 import me.desair.tus.server.util.TusServletResponse;
 import me.desair.tus.server.util.Utils;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * The Server MUST acknowledge a successful upload creation with the 201 Created status.

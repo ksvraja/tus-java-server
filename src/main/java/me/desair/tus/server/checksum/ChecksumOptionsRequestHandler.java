@@ -1,12 +1,13 @@
 package me.desair.tus.server.checksum;
 
+import org.apache.commons.lang3.StringUtils;
+
 import me.desair.tus.server.HttpHeader;
 import me.desair.tus.server.HttpMethod;
 import me.desair.tus.server.upload.UploadStorageService;
 import me.desair.tus.server.util.AbstractExtensionRequestHandler;
 import me.desair.tus.server.util.TusServletRequest;
 import me.desair.tus.server.util.TusServletResponse;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * The Tus-Checksum-Algorithm header MUST be included in the response to an OPTIONS request.

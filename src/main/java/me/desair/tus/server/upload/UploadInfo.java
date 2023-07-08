@@ -6,14 +6,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
-import javax.servlet.http.HttpServletRequest;
 
-import me.desair.tus.server.util.Utils;
 import org.apache.commons.codec.Charsets;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+
+import jakarta.servlet.http.HttpServletRequest;
+import me.desair.tus.server.util.Utils;
 
 /**
  * Class that contains all metadata on an upload process. This class also holds the metadata provided by the client

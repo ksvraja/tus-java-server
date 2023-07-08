@@ -11,15 +11,16 @@ import java.nio.file.Paths;
 import java.text.ParseException;
 import java.util.UUID;
 
-import me.desair.tus.server.upload.UploadId;
-import me.desair.tus.server.upload.UploadInfo;
-import me.desair.tus.server.upload.UploadLockingService;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+
+import me.desair.tus.server.upload.UploadId;
+import me.desair.tus.server.upload.UploadInfo;
+import me.desair.tus.server.upload.UploadLockingService;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class ExpiredUploadFilterTest {

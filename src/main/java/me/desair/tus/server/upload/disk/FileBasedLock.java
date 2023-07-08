@@ -10,12 +10,13 @@ import java.nio.channels.OverlappingFileLockException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import me.desair.tus.server.exception.UploadAlreadyLockedException;
-import me.desair.tus.server.upload.UploadLock;
-import me.desair.tus.server.util.Utils;
 import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import me.desair.tus.server.exception.UploadAlreadyLockedException;
+import me.desair.tus.server.upload.UploadLock;
+import me.desair.tus.server.util.Utils;
 
 /**
  * Upload locking implementation using the file system file locking mechanism.

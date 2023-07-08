@@ -1,14 +1,16 @@
 package me.desair.tus.server.util;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpServletResponseWrapper;
 
 import org.apache.commons.lang3.StringUtils;
+
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponseWrapper;
 
 /**
  * {@link HttpServletResponseWrapper} to capture header values set on the current {@link HttpServletResponse}
@@ -38,6 +40,17 @@ public class TusServletResponse extends HttpServletResponseWrapper {
         super.addDateHeader(name, date);
         recordHeader(name, Objects.toString(date));
     }
+    
+    @Override
+	public Collection<String> getHeaders(String name) {
+		List<String> headers = this.headers.get(name);
+		if (headers != null) {
+			return headers;
+		}
+		else {
+			return super.getHeaders(name);
+		}
+	}
 
     @Override
     public void setHeader(String name, String value) {

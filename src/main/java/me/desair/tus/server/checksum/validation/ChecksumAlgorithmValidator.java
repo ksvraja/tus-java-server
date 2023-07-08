@@ -1,8 +1,10 @@
 package me.desair.tus.server.checksum.validation;
 
 import java.io.IOException;
-import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang3.StringUtils;
+
+import jakarta.servlet.http.HttpServletRequest;
 import me.desair.tus.server.HttpHeader;
 import me.desair.tus.server.HttpMethod;
 import me.desair.tus.server.RequestValidator;
@@ -10,7 +12,6 @@ import me.desair.tus.server.checksum.ChecksumAlgorithm;
 import me.desair.tus.server.exception.ChecksumAlgorithmNotSupportedException;
 import me.desair.tus.server.exception.TusException;
 import me.desair.tus.server.upload.UploadStorageService;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * The Server MAY respond with one of the following status code: 400 Bad Request

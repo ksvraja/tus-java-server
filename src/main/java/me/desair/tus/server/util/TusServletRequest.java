@@ -12,15 +12,16 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletRequestWrapper;
 
-import me.desair.tus.server.HttpHeader;
-import me.desair.tus.server.TusExtension;
-import me.desair.tus.server.checksum.ChecksumAlgorithm;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.input.CountingInputStream;
 import org.apache.commons.lang3.StringUtils;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequestWrapper;
+import me.desair.tus.server.HttpHeader;
+import me.desair.tus.server.TusExtension;
+import me.desair.tus.server.checksum.ChecksumAlgorithm;
 
 public class TusServletRequest extends HttpServletRequestWrapper {
 

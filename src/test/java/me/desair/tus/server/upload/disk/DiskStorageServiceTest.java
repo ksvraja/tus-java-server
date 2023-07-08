@@ -25,13 +25,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
 
-import me.desair.tus.server.exception.InvalidUploadOffsetException;
-import me.desair.tus.server.exception.UploadNotFoundException;
-import me.desair.tus.server.upload.UploadId;
-import me.desair.tus.server.upload.UploadIdFactory;
-import me.desair.tus.server.upload.UploadInfo;
-import me.desair.tus.server.upload.UploadLockingService;
-import me.desair.tus.server.util.Utils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -44,6 +37,14 @@ import org.mockito.Mock;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.stubbing.Answer;
+
+import me.desair.tus.server.exception.InvalidUploadOffsetException;
+import me.desair.tus.server.exception.UploadNotFoundException;
+import me.desair.tus.server.upload.UploadId;
+import me.desair.tus.server.upload.UploadIdFactory;
+import me.desair.tus.server.upload.UploadInfo;
+import me.desair.tus.server.upload.UploadLockingService;
+import me.desair.tus.server.util.Utils;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class DiskStorageServiceTest {

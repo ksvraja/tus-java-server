@@ -13,12 +13,6 @@ import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
-import me.desair.tus.server.exception.TusException;
-import me.desair.tus.server.upload.UploadInfo;
-import me.desair.tus.server.upload.UploadStorageService;
-import me.desair.tus.server.util.AbstractTusExtension;
-import me.desair.tus.server.util.TusServletRequest;
-import me.desair.tus.server.util.TusServletResponse;
 import org.apache.commons.io.IOUtils;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -27,6 +21,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+
+import me.desair.tus.server.exception.TusException;
+import me.desair.tus.server.upload.UploadInfo;
+import me.desair.tus.server.upload.UploadStorageService;
+import me.desair.tus.server.util.AbstractTusExtension;
+import me.desair.tus.server.util.TusServletRequest;
+import me.desair.tus.server.util.TusServletResponse;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
 public abstract class AbstractTusExtensionIntegrationTest {

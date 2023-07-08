@@ -17,9 +17,6 @@ import java.nio.file.Paths;
 import java.nio.file.attribute.FileTime;
 import java.util.UUID;
 
-import me.desair.tus.server.upload.UploadId;
-import me.desair.tus.server.upload.UploadIdFactory;
-import me.desair.tus.server.upload.UploadLock;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.AfterClass;
@@ -31,6 +28,10 @@ import org.mockito.Mock;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.stubbing.Answer;
+
+import me.desair.tus.server.upload.UploadId;
+import me.desair.tus.server.upload.UploadIdFactory;
+import me.desair.tus.server.upload.UploadLock;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class DiskLockingServiceTest {

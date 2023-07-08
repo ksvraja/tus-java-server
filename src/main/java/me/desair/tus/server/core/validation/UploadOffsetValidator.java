@@ -2,8 +2,10 @@ package me.desair.tus.server.core.validation;
 
 import java.io.IOException;
 import java.util.Objects;
-import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang3.StringUtils;
+
+import jakarta.servlet.http.HttpServletRequest;
 import me.desair.tus.server.HttpHeader;
 import me.desair.tus.server.HttpMethod;
 import me.desair.tus.server.RequestValidator;
@@ -12,7 +14,6 @@ import me.desair.tus.server.exception.UploadOffsetMismatchException;
 import me.desair.tus.server.upload.UploadInfo;
 import me.desair.tus.server.upload.UploadStorageService;
 import me.desair.tus.server.util.Utils;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * The Upload-Offset header’s value MUST be equal to the current offset of the resource.

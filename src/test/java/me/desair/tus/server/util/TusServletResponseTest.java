@@ -15,6 +15,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletResponse;
 
+import static me.desair.tus.server.util.DateUtils.getHeaderDateString;
+
 public class TusServletResponseTest {
 
     private static final FastDateFormat DATE_FORMAT = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss",
@@ -37,7 +39,7 @@ public class TusServletResponseTest {
         assertThat(tusServletResponse.getHeader("TEST"),
                 is("" + DATE_FORMAT.parse("2018-01-03 22:38:14").getTime()));
         assertThat(servletResponse.getHeaders("TEST"),
-                contains("" + DATE_FORMAT.parse("2018-01-03 22:38:14").getTime()));
+                contains(getHeaderDateString("2018-01-03 22:38:14")));
     }
 
     @Test
@@ -48,8 +50,8 @@ public class TusServletResponseTest {
         assertThat(tusServletResponse.getHeader("TEST"),
                 is("" + DATE_FORMAT.parse("2018-01-03 22:34:12").getTime()));
         assertThat(servletResponse.getHeaders("TEST"), containsInAnyOrder(
-                "" + DATE_FORMAT.parse("2018-01-03 22:34:12").getTime(),
-                "" + DATE_FORMAT.parse("2018-01-03 22:38:14").getTime()));
+                "" + getHeaderDateString("2018-01-03 22:34:12"),
+                "" + getHeaderDateString("2018-01-03 22:38:14")));
     }
 
     @Test

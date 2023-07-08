@@ -7,16 +7,17 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-import me.desair.tus.server.HttpHeader;
-import me.desair.tus.server.HttpMethod;
-import me.desair.tus.server.exception.ChecksumAlgorithmNotSupportedException;
-import me.desair.tus.server.upload.UploadStorageService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletRequest;
+
+import me.desair.tus.server.HttpHeader;
+import me.desair.tus.server.HttpMethod;
+import me.desair.tus.server.exception.ChecksumAlgorithmNotSupportedException;
+import me.desair.tus.server.upload.UploadStorageService;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class ChecksumAlgorithmValidatorTest {

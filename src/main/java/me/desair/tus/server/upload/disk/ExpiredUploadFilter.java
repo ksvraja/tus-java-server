@@ -5,11 +5,12 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Path;
 import java.util.Objects;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import me.desair.tus.server.upload.UploadId;
 import me.desair.tus.server.upload.UploadInfo;
 import me.desair.tus.server.upload.UploadLockingService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Directory stream filter that only accepts uploads that are still in progress and expired

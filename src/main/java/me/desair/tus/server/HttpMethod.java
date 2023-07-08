@@ -1,10 +1,11 @@
 package me.desair.tus.server;
 
 import java.util.Set;
-import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * Class that represents a HTTP method.

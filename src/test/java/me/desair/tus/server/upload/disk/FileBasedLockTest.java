@@ -2,8 +2,8 @@ package me.desair.tus.server.upload.disk;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.fail;
-import static org.mockito.Mockito.anyBoolean;
-import static org.mockito.Mockito.anyLong;
+import static org.mockito.ArgumentMatchers.anyBoolean;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
 
@@ -14,9 +14,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
 
-import me.desair.tus.server.exception.UploadAlreadyLockedException;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import me.desair.tus.server.exception.UploadAlreadyLockedException;
 
 public class FileBasedLockTest {
 

@@ -1,9 +1,10 @@
 package me.desair.tus.server.util;
 
+import org.apache.commons.lang3.StringUtils;
+
 import me.desair.tus.server.HttpHeader;
 import me.desair.tus.server.HttpMethod;
 import me.desair.tus.server.upload.UploadStorageService;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * Abstract request handler to add tus extension values to the correct header

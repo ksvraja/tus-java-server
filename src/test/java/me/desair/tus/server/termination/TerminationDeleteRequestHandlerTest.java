@@ -10,14 +10,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.UUID;
-import javax.servlet.http.HttpServletResponse;
 
-import me.desair.tus.server.HttpMethod;
-import me.desair.tus.server.upload.UploadId;
-import me.desair.tus.server.upload.UploadInfo;
-import me.desair.tus.server.upload.UploadStorageService;
-import me.desair.tus.server.util.TusServletRequest;
-import me.desair.tus.server.util.TusServletResponse;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,6 +18,14 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+
+import jakarta.servlet.http.HttpServletResponse;
+import me.desair.tus.server.HttpMethod;
+import me.desair.tus.server.upload.UploadId;
+import me.desair.tus.server.upload.UploadInfo;
+import me.desair.tus.server.upload.UploadStorageService;
+import me.desair.tus.server.util.TusServletRequest;
+import me.desair.tus.server.util.TusServletResponse;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class TerminationDeleteRequestHandlerTest {

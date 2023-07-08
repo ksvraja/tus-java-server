@@ -15,11 +15,12 @@ import java.text.ParseException;
 import java.util.Stack;
 import java.util.UUID;
 
-import me.desair.tus.server.HttpHeader;
-import me.desair.tus.server.util.Utils;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
+
+import me.desair.tus.server.HttpHeader;
+import me.desair.tus.server.util.Utils;
 
 public class UploadInfoTest {
 

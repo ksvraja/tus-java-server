@@ -2,6 +2,8 @@ package me.desair.tus.server.expiration;
 
 import java.io.IOException;
 
+import org.apache.commons.lang3.StringUtils;
+
 import me.desair.tus.server.HttpHeader;
 import me.desair.tus.server.HttpMethod;
 import me.desair.tus.server.exception.TusException;
@@ -10,7 +12,6 @@ import me.desair.tus.server.upload.UploadStorageService;
 import me.desair.tus.server.util.AbstractRequestHandler;
 import me.desair.tus.server.util.TusServletRequest;
 import me.desair.tus.server.util.TusServletResponse;
-import org.apache.commons.lang3.StringUtils;
 
 /**
  * The Upload-Expires response header indicates the time after which the unfinished upload expires. This header MUST

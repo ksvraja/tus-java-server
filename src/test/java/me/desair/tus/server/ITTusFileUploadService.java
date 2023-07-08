@@ -20,11 +20,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.UUID;
-import javax.servlet.http.HttpServletResponse;
 
-import me.desair.tus.server.exception.TusException;
-import me.desair.tus.server.upload.UploadInfo;
-import me.desair.tus.server.util.Utils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -34,6 +30,13 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
+
+import jakarta.servlet.http.HttpServletResponse;
+import me.desair.tus.server.exception.TusException;
+import me.desair.tus.server.upload.UploadInfo;
+import me.desair.tus.server.util.Utils;
+import static me.desair.tus.server.util.DateUtils.*;
+
 
 public class ITTusFileUploadService {
 
@@ -465,7 +468,8 @@ public class ITTusFileUploadService {
         assertResponseHeaderNotBlank(HttpHeader.UPLOAD_EXPIRES);
         assertResponseStatus(HttpServletResponse.SC_CREATED);
 
-        Long expirationTimestampBefore = Long.parseLong(servletResponse.getHeader(HttpHeader.UPLOAD_EXPIRES));
+        Long expirationTimestampBefore =  getHeaderDateLong(servletResponse.getHeader(HttpHeader.UPLOAD_EXPIRES));
+        	//Long.parseLong(servletResponse.getHeader(HttpHeader.UPLOAD_EXPIRES));
 
         String location = UPLOAD_URI +
                 StringUtils.substringAfter(servletResponse.getHeader(HttpHeader.LOCATION), UPLOAD_URI);
@@ -664,7 +668,7 @@ public class ITTusFileUploadService {
         assertResponseHeaderNotBlank(HttpHeader.UPLOAD_EXPIRES);
         assertResponseHeader(HttpHeader.UPLOAD_OFFSET, "41");
 
-        Long expirationTimestampBefore = Long.parseLong(servletResponse.getHeader(HttpHeader.UPLOAD_EXPIRES));
+        Long expirationTimestampBefore = getHeaderDateLong(servletResponse.getHeader(HttpHeader.UPLOAD_EXPIRES));
 
         //Make sure cleanup does not interfere with this test
         tusFileUploadService.cleanup();

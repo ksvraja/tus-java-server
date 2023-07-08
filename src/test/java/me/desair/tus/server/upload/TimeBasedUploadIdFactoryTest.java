@@ -8,9 +8,10 @@ import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
-import me.desair.tus.server.util.Utils;
 import org.junit.Before;
 import org.junit.Test;
+
+import me.desair.tus.server.util.Utils;
 
 public class TimeBasedUploadIdFactoryTest {
 

@@ -13,10 +13,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.UUID;
 
-import me.desair.tus.server.exception.UploadNotFoundException;
-import me.desair.tus.server.upload.UploadId;
-import me.desair.tus.server.upload.UploadInfo;
-import me.desair.tus.server.upload.UploadStorageService;
 import org.apache.commons.io.IOUtils;
 import org.hamcrest.Matchers;
 import org.junit.Before;
@@ -24,6 +20,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+
+import me.desair.tus.server.exception.UploadNotFoundException;
+import me.desair.tus.server.upload.UploadId;
+import me.desair.tus.server.upload.UploadInfo;
+import me.desair.tus.server.upload.UploadStorageService;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class VirtualConcatenationServiceTest {

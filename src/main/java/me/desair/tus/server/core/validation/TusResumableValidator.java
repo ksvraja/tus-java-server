@@ -1,7 +1,8 @@
 package me.desair.tus.server.core.validation;
 
-import javax.servlet.http.HttpServletRequest;
+import org.apache.commons.lang3.StringUtils;
 
+import jakarta.servlet.http.HttpServletRequest;
 import me.desair.tus.server.HttpHeader;
 import me.desair.tus.server.HttpMethod;
 import me.desair.tus.server.RequestValidator;
@@ -10,7 +11,6 @@ import me.desair.tus.server.exception.InvalidTusResumableException;
 import me.desair.tus.server.exception.TusException;
 import me.desair.tus.server.upload.UploadStorageService;
 import me.desair.tus.server.util.Utils;
-import org.apache.commons.lang3.StringUtils;
 
 /** Class that will validate if the tus version in the request corresponds to our implementation version
  * <p/>
